@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import StyledHero from "../components/styledhero"
 import { graphql } from "gatsby"
-import Contact from "../components/Contact/Contact"
+import Contact from "../components/contact/contact"
 
 const contact = ({ data }) => {
   return (
