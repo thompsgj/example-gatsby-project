@@ -1,19 +1,26 @@
 import React from "react"
 import Layout from "../components/layout"
-import Button from "../examples/button"
+import StyledHero from "../components/styledhero"
+import { graphql } from "gatsby"
 
-const tours = () => {
+const tours = ({ data }) => {
   return (
     <Layout>
-      Tours Page
-      <div>
-        {/*}
-          <Button big>First</Button>
-          <Button color="yellow">Second</Button>
-        */}
-      </div>
+      <StyledHero img={data.defaultBcg.childImageSharp.fluid} />
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+      childImageSharp {
+        fluid(maxWidth: 4160, quality: 90) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
 
 export default tours
