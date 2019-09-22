@@ -10,6 +10,7 @@ import About from "../components/home/about"
 import Services from "../components/home/services"
 import StyledHero from "../components/styledhero"
 import { graphql } from "gatsby"
+import FeaturedTours from "../components/home/featuredTours"
 
 export default ({ data }) => {
   return (
@@ -28,11 +29,10 @@ export default ({ data }) => {
         </StyledHero>
         <About />
         <Services />
-        Hello Page!
+        <FeaturedTours />
         {/* Use CamelCase and "" for inline styles
         <h1 style={{ textTransform: "capitalize", color: "red" }}>
         */}
-        <div>Hello from Backroads!</div>
       </Layout>
     </>
   )
