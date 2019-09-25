@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import Banner from "../components/banner"
-import About from "../components/Home/about"
+import About from "../components/home/about"
 import Services from "../components/home/services"
 import StyledHero from "../components/styledhero"
 import { graphql } from "gatsby"
