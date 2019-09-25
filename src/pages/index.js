@@ -1,12 +1,12 @@
 import React from "react"
 import Layout from "../components/Layout"
-import Banner from "../components/Banner"
-import About from "../components/Home/About"
-import Services from "../components/Home/Services"
-import StyledHero from "../components/StyledHero"
+import Banner from "../components/banner"
+import About from "../components/Home/about"
+import Services from "../components/home/services"
+import StyledHero from "../components/styledhero"
 import { graphql } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import FeaturedTours from "../components/Home/FeaturedTours"
+import FeaturedTours from "../components/home/featuredtours"
 import SEO from "../components/SEO"
 export default ({ data }) => (
   <Layout>
