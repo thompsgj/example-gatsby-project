@@ -6,7 +6,7 @@ import Services from "../components/home/services"
 import StyledHero from "../components/styledhero"
 import { graphql } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import FeaturedTours from "../components/home/featuredtours"
+import FeaturedTours from "../components/home/featuredTours"
 import SEO from "../components/SEO"
 export default ({ data }) => (
   <Layout>
