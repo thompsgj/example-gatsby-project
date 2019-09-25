@@ -1,7 +1,7 @@
 import React from "react"
 import Tour from "../tours/tour"
 import { graphql, useStaticQuery } from "gatsby"
-import Title from "../Title"
+import Title from "../title"
 import styles from "../../css/items.module.css"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
