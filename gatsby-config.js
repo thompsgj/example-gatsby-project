@@ -15,9 +15,9 @@ module.exports = {
     description:
       "Explore awesome worldwide tours and discover what makes each of them unique.  Forget your daily routine and say yes to adventure.",
     author: "John Doe",
-    data: {
-      age: 24,
-    },
+    twitterUsername: "@john_doe",
+    image: "/defaultBcg.jpeg",
+    siteUrl: "https://relaxed-shirley-dd3ece.netlify.com",
   },
   plugins: [
     {
@@ -39,5 +39,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-playground`,
+    `gatsby-plugin-react-helmet`,
   ],
 }

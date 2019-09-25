@@ -8,9 +8,6 @@ const getData = graphql`
         title
         description
         author
-        data {
-          age
-        }
       }
     }
   }

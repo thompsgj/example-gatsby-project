@@ -1,48 +1,36 @@
 import React from "react"
-
-//import { Link } from "gatsby"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-
-import Layout from "../components/layout"
-//import SimpleHero from "../components/simplehero"
-import Banner from "../components/banner"
-import About from "../components/home/about"
-import Services from "../components/home/services"
-import StyledHero from "../components/styledhero"
+import Layout from "../components/Layout"
+import Banner from "../components/Banner"
+import About from "../components/Home/About"
+import Services from "../components/Home/Services"
+import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
-import FeaturedTours from "../components/home/featuredTours"
-
-export default ({ data }) => {
-  return (
-    <>
-      <Layout>
-        {/*<SimpleHero>Banner here </SimpleHero>*/}
-        <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid}>
-          <Banner
-            title="continue exploring"
-            info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, cum?"
-          >
-            <AniLink fade to="/tours" className="btn-white">
-              explore tours
-            </AniLink>
-          </Banner>
-        </StyledHero>
-        <About />
-        <Services />
-        <FeaturedTours />
-        {/* Use CamelCase and "" for inline styles
-        <h1 style={{ textTransform: "capitalize", color: "red" }}>
-        */}
-      </Layout>
-    </>
-  )
-}
-
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import FeaturedTours from "../components/Home/FeaturedTours"
+import SEO from "../components/SEO"
+export default ({ data }) => (
+  <Layout>
+    <SEO title="Home" />
+    <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid}>
+      <Banner
+        title="continue exploring"
+        info=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, officiis."
+      >
+        <AniLink fade to="/tours" className="btn-white">
+          explore tours
+        </AniLink>
+      </Banner>
+    </StyledHero>
+    <About />
+    <Services />
+    <FeaturedTours />
+  </Layout>
+)
 export const query = graphql`
   query {
     defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
       childImageSharp {
-        fluid(maxWidth: 4160, quality: 90) {
+        fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
